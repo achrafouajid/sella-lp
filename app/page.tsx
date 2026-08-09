@@ -11,39 +11,21 @@ export default function Home() {
   const content = {
     ar: {
       headline: "تسخيرت الحومة، سلتك مضمونة",
-      subheadline: "خضرة طازة من كيدّا بتاعك، الساعة اللي بغيتي",
-      description:
-        "تشري سلتك من الخضرة من فلاح الحومة بتاعك بدون وسيط. خضرة طازة، أثمنة عادلة، توصيل في 24-48 ساعة",
       cta: "شنو التطبيق ديالك",
       watchDemo: "شوف الديمو",
       downloadAPK: "حمّل APK",
       directDownload: "حمّل مباشرة",
       version: "الإصدار 1.0",
-      features: [
-        "خضرة طازة من كيدّا بتاعك",
-        "أثمنة عادلة وشفافة",
-        "توصيل سريع وآمن",
-        "ضمان الجودة",
-      ],
       forGrocers: "أنت فلاح؟",
       grocersText: "طيح بوابة جديدة للكسب. بيع مباشرة للعملاء بتاع الحومة بتاعك",
     },
     en: {
       headline: "Sella",
-      subheadline: "Your Neighborhood's Fresh Produce, Guaranteed",
-      description:
-        "Buy fresh produce directly from your neighborhood grocer. Fresh vegetables, fair prices, delivery in 24-48 hours. No middleman.",
       cta: "Get the App",
       watchDemo: "Watch Demo",
       downloadAPK: "Download APK",
       directDownload: "Download Direct",
       version: "Version 1.0",
-      features: [
-        "Fresh produce from your neighborhood",
-        "Fair & transparent prices",
-        "Fast & secure delivery",
-        "Quality guaranteed",
-      ],
       forGrocers: "Are you a grocer?",
       grocersText:
         "Open a new door to income. Sell directly to your neighborhood customers",
@@ -93,22 +75,6 @@ export default function Home() {
 
           {/* Headline */}
           <h1 className={styles.headline}>{t.headline}</h1>
-
-          {/* Subheadline */}
-          <h2 className={styles.subheadline}>{t.subheadline}</h2>
-
-          {/* Description */}
-          <p className={styles.description}>{t.description}</p>
-
-          {/* Features */}
-          <div className={styles.features}>
-            {t.features.map((feature, index) => (
-              <div key={index} className={styles.feature}>
-                <span className={styles.featureIcon}>✓</span>
-                <span>{feature}</span>
-              </div>
-            ))}
-          </div>
 
           {/* CTA Buttons */}
           <div className={styles.ctaContainer}>
