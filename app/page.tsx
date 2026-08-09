@@ -74,6 +74,17 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className={styles.hero}>
+        {/* Hero Video Background */}
+        <video
+          className={styles.heroVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
+
         <div className={styles.content}>
           {/* Logo */}
           <div className={styles.logo}>
