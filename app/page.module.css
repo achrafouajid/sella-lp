@@ -1,0 +1,524 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+.languageToggle {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 100;
+  display: flex;
+  gap: 0.5rem;
+  background: white;
+  border-radius: 2rem;
+  padding: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rtl .languageToggle {
+  left: auto;
+  right: 1.5rem;
+}
+
+.toggleBtn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: var(--ink);
+  border-radius: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.toggleBtn:hover {
+  background: var(--background);
+}
+
+.toggleBtn.active {
+  background: var(--primary);
+  color: white;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--primary) 0%, #2d6b52 100%);
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.backgroundDecor {
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+  opacity: 0.3;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.rtl .backgroundDecor {
+  right: auto;
+  left: -10%;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.logoCircle {
+  width: 120px;
+  height: 120px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  box-shadow: 0 10px 40px rgba(30, 77, 59, 0.2);
+}
+
+.headline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .headline {
+    font-size: 2.5rem;
+  }
+}
+
+.subheadline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .subheadline {
+    font-size: 1.1rem;
+  }
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.featureIcon {
+  width: 24px;
+  height: 24px;
+  background: var(--secondary);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.ctaContainer {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(30, 77, 59, 0.3);
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background: #154a37;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(30, 77, 59, 0.4);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.downloadSection {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--accent) 0%, #e07c54 100%);
+  color: white;
+}
+
+.downloadContent {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.downloadTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .downloadTitle {
+    font-size: 1.8rem;
+  }
+}
+
+.downloadVersion {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.downloadSubtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.downloadBtnContainer {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  background: white;
+  color: var(--accent);
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.downloadBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.downloadIcon {
+  font-size: 1.5rem;
+}
+
+.playStoreBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: white;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.playStoreBtn:hover {
+  background: white;
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.playStoreIcon {
+  font-size: 1.5rem;
+}
+
+.demoSection {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.demoContent {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.demoTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .demoTitle {
+    font-size: 1.8rem;
+  }
+}
+
+.demoSubtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(30, 77, 59, 0.2);
+}
+
+.demoVideo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+}
+
+.grocersSection {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.grocersContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.grocersTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .grocersTitle {
+    font-size: 1.8rem;
+  }
+}
+
+.grocersText {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.grocersFeatures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.grocerFeature {
+  padding: 1.5rem;
+  background: var(--background);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.grocerFeature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(30, 77, 59, 0.1);
+}
+
+.grocerIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.grocerFeature p {
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.contactBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 2rem;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(217, 107, 67, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contactBtn:hover {
+  background: #c45932;
+  transform: translateY(-2px);
+}
+
+.footer {
+  padding: 2rem;
+  text-align: center;
+  background: var(--ink);
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .languageToggle {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .rtl .languageToggle {
+    left: 1rem;
+    right: auto;
+  }
+
+  .hero {
+    padding: 1rem;
+  }
+
+  .logoCircle {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+  }
+
+  .headline {
+    font-size: 1.8rem;
+  }
+
+  .subheadline {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .ctaContainer {
+    gap: 1rem;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .downloadSection {
+    padding: 3rem 1rem;
+  }
+
+  .demoSection {
+    padding: 3rem 1rem;
+  }
+
+  .demoTitle {
+    font-size: 1.5rem;
+  }
+
+  .demoSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .grocersSection {
+    padding: 3rem 1rem;
+  }
+
+  .grocersFeatures {
+    grid-template-columns: 1fr;
+  }
+}
