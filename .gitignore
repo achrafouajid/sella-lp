@@ -8,5 +8,3 @@ build
 .env.*.local
 .DS_Store
 .vercel
-*.apk
-public/downloads/
