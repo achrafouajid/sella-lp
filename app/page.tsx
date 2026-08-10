@@ -118,10 +118,11 @@ export default function Home() {
           </p>
           <div className={styles.downloadBtnContainer}>
             <a
-              href="/downloads/sella-1.0.apk"
-              download="sella-1.0.apk"
+              href="https://github.com/achrafouajid/sella-lp/releases/download/v1.0/sella-1.0.apk"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.downloadBtn}
-              title="Direct APK download"
+              title="Direct APK download from GitHub Releases"
             >
               <span className={styles.downloadIcon}>⬇️</span>
               {t.directDownload}
